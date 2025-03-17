@@ -60,9 +60,8 @@ const Home = ()=> {
  
   
   if (isLoading || isPending) {
-    return <p> Loading</p> ;
+    return <p> Loading...</p> ;
   }
-
 
   if (isError) {
     return <span>Error: {error?.message}</span>;
@@ -90,8 +89,8 @@ const Home = ()=> {
           </div>
           <div className="btn-wrap">
 
-          <Button danger onClick={()=>mutate(user.id)}><DeleteOutlined /></Button>
-          <Button onClick={() => handleEditClick(user.id)}><EditOutlined /></Button>
+          <Button danger onClick={()=>mutate(user.id)}><DeleteOutlined  /></Button>
+          <Button color="primary" className="edit-btn" onClick={() => handleEditClick(user.id)}><EditOutlined className="edit-icon" /></Button>
           </div>
         </div>
       ))}
